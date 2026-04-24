@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import SearchBar from "./components/SearchBar"
 import UserCard from "./components/UserCard"
 
@@ -30,6 +30,10 @@ function App() {
     setRepos(reposData)
     setLoading(false)
   }
+
+  useEffect(() => {
+    handleSearch("sharjeel-ashraf1")
+  }, [])
 
   return (
     <div className="app">
